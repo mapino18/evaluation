@@ -14,7 +14,7 @@
 <body>
 
     <div class="container">
-        <h1>Formulaire en Javascript</h1>
+        <h1>Formulaire en JQUERY</h1>
         <!-- Début du formulaire -->
         <form name="formulaire_ajax" id="formulaire_ajax" action="" method="POST">
             <label for="nom">Nom</label>
@@ -23,29 +23,32 @@
             <input class="form-control" type="text" name="prenom" id="prenom" placeholder="Prénom">
             <label for="password">Mot de passe</label>
             <!-- Bouton pour la génération du mot de passe -->
-            <button class="btn btn-success" type="button" id="btn_generate_mdp" onclick="generateMDP()">Générer un mot de passse</button><br>
-            <input class="form-control" type="text" name="password" id="password" placeholder="Mot de passe">            
+            <button class="btn btn-info" type="button" id="btn_generate_mdp">Générer un mot de passse JQUERY</button><br>
+            <input class="form-control" type="password" name="password" id="password" placeholder="Mot de passe">            
             <label for="confirmpassword">Confirmation Mot de passe</label>
-            <input class="form-control" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirmation du mot de passe" onchange="verifPassword()">         
+            <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirmation du mot de passe" >         
             <div id="message"></div>   
             <label for="email">Email</label>
-            <input class="form-control" type="email" name="email" id="email" placeholder="Email" onblur="verifEmail(this)">            
+            <input class="form-control" type="email" name="email" id="email" placeholder="Email">            
             <label for="tel">Numéro de téléphone</label>
-            <input class="form-control" type="tel" name="tel" id="tel" placeholder="Numéro de téléphone" onblur="verifTel(this)">
-            <!-- Bouton d'appel AJAX en javascript -->
-            <button class="btn btn-primary" type="button" name="ajax_js" id="ajax_js">Charger le contenu en Ajax en Javascript</button>
+            <input class="form-control" type="tel" name="tel" id="tel" placeholder="Numéro de téléphone" >
+            <!-- Bouton d'appel AJAX en JQUERY -->
+            <button class="btn btn-danger" type="button" name="ajax_js_jquery" id="ajax_js_jquery">Charger le contenu en Ajax avec JQUERY</button></br>
             <!-- Bouton d'envoi du formulaire  -->
-            <button class="btn btn-info" type="submit" name="submit" id="submit" onclick="viderFormulaire()">Envoyer</button>
+            <button class="btn btn-info" type="submit" name="submit" id="submit">Envoyer</button>
         </form>
         <!-- fin du formulaire -->
-         <!-- Div pour charger les données du formulaire en ajax-->
+        <!-- Div pour charger les données du formulaire en ajax-->
         <div id="charge">
         </div>
         <!-- Div pour affichage text de validation-->
         <div id="validation">
         </div>
     </div>   
+
+    <!--  Chargement de la librairie JQUERY--> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <!--  Chargement du Javascript--> 
-    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="assets/js/scripts-jquery.js"></script>
 </body>
 </html>
